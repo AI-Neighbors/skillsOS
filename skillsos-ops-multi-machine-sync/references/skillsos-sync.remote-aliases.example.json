@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "description": "Public-safe remote SSH-alias example for copying the pack into isolated runtimes.",
+  "state_root": "~/.local/state/skillsos-sync",
+  "backup_root": "~/.local/state/skillsos-sync/backups",
+  "items": [
+    {
+      "name": "skillsos-ops-multi-machine-sync",
+      "kind": "pack",
+      "family": "pack",
+      "source_path": "skillsos-ops-multi-machine-sync",
+      "target_name": "skillsos-ops-multi-machine-sync"
+    }
+  ],
+  "hosts": {
+    "vps1-runtime": {
+      "families": {
+        "pack": {
+          "install_target": "/home/user/.codex/packs-public",
+          "install_mode": "copy",
+          "transport": "ssh-rsync",
+          "ssh_target": "vps1",
+          "delete_extraneous": false
+        }
+      }
+    },
+    "vps2-pack-mirror": {
+      "families": {
+        "pack": {
+          "install_target": "/home/user/.skillsos-public/packs",
+          "install_mode": "copy",
+          "transport": "ssh-rsync",
+          "ssh_target": "vps2",
+          "delete_extraneous": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+Host vps1
+  HostName your-vps1-host-or-ip
+  User user
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host vps2
+  HostName your-vps2-host-or-ip
+  User user
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host vps3
+  HostName your-vps3-host-or-ip
+  User user
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+
+Host isolated-runtime-vps
+  HostName your-isolated-runtime-host-or-ip
+  User user
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes

@@ -1,0 +1,19 @@
+{
+  "name": "@ai-neighbors/skillsos-sync",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Config-driven sync helper for reusable agent workflow packs across isolated runtimes.",
+  "bin": {
+    "skillsos-sync": "./bin/skillsos-sync.mjs"
+  },
+  "scripts": {
+    "sync:plan": "node ./bin/skillsos-sync.mjs plan",
+    "sync:apply": "node ./bin/skillsos-sync.mjs sync",
+    "sync:verify": "node ./bin/skillsos-sync.mjs verify",
+    "sync:registry": "node ./bin/skillsos-sync.mjs registry"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
