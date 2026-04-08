@@ -1,6 +1,19 @@
 # skillsOS
 
-Reusable agent workflow packs for multi-machine and isolated-runtime setups.
+[![EN](https://img.shields.io/badge/EN-read-green?style=flat)](./README.md)
+[![RU](https://img.shields.io/badge/RU-read-blue?style=flat)](./README.ru.md)
+[![ES](https://img.shields.io/badge/ES-read-orange?style=flat)](./README.es.md)
+[![CN](https://img.shields.io/badge/CN-read-red?style=flat)](./README.cn.md)
+
+> Copy-paste does not survive multi-machine agent workflows for long.
+
+![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=anthropic&logoColor=white)
+![Codex](https://img.shields.io/badge/Codex-111111?style=flat&logo=openai&logoColor=white)
+![OpenCode](https://img.shields.io/badge/OpenCode-222222?style=flat)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+---
 
 <table>
   <tr>
@@ -15,25 +28,40 @@ Reusable agent workflow packs for multi-machine and isolated-runtime setups.
   </tr>
 </table>
 
-## Why this repo exists
+## What Is This
 
-One operator pain keeps showing up in AI engineering:
+`skillsOS` is a small open repo for one practical operator problem:
 
-- the same useful rules and workflow pieces need to exist across several machines
-- some runtimes must stay isolated
-- manual copy-paste drifts fast
+keeping reusable workflow assets in sync across several machines and isolated runtimes without endless manual copy-paste.
 
-This repo is a small public slice around one current answer:
+This repo is not trying to be a giant framework.
+
+It is a focused public slice around:
 
 - one runnable sync CLI
 - one public pack
-- one place to improve the pattern together
+- one clean contribution surface
 
-## Current pack
+If you work across `Codex`, `Claude Code`, `OpenCode`, `OpenClaw`, `Pi`, or similar isolated runtimes, this is the kind of problem it addresses.
 
-- [`skillsos-ops-multi-machine-sync/`](./skillsos-ops-multi-machine-sync/README.md)
+## Features
 
-## Quick start
+| Feature | What it does |
+| --- | --- |
+| `skillsos-sync` CLI | Plans, syncs, verifies, and snapshots one pack across multiple targets |
+| Public-safe manifests | Example local and remote alias manifests without leaking private hostnames |
+| Pack vs runtime split | Keeps reusable packs separate from runtime-specific skill rails |
+| Side-by-side media | One image and one loop preview for social and README reuse |
+| X stubs | Lightweight post drafts for `EN`, `RU`, `ES`, and `CN` |
+| Contribution-first framing | Clear `Star / Fork / PR / Contribute` entrypoint |
+
+## Quick Start
+
+```bash
+git clone https://github.com/AI-Neighbors/skillsOS.git
+cd skillsOS
+npm install
+```
 
 ```bash
 npm run sync:plan -- \
@@ -53,21 +81,97 @@ npm run sync:verify -- \
   --all-hosts
 ```
 
-## What is included
+## Usage
 
-- `bin/skillsos-sync.mjs` = thin CLI
-- `skillsos-ops-multi-machine-sync/` = public pack
-- `posts/x/` = lightweight X stubs for publishing
-- `docs/media/` = reusable social assets
+| Need | Command |
+| --- | --- |
+| Inspect what will happen | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Install the pack locally | `npm run sync:apply -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Verify installed targets | `npm run sync:verify -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Inspect remote alias fan-out | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.remote-aliases.example.json --all-hosts` |
 
-## Contribution
+## How It Works
 
-If this pain looks familiar:
+```text
+one repo
+   |
+   +-- one public pack
+   |      |
+   |      +-- README
+   |      +-- references
+   |      +-- example manifests
+   |
+   +-- one sync CLI
+          |
+          +-- local runtimes
+          |     +-- ~/.codex/packs-public
+          |     +-- ~/.claude/packs-public
+          |     +-- ~/.agents/packs-public
+          |
+          +-- remote aliases
+                +-- vps1
+                +-- vps2
+                +-- vps3
+```
 
-- star the repo
+The main point is simple:
+
+- keep the pack as the source
+- keep installation repeatable
+- keep examples generic and public-safe
+
+## Project Structure
+
+```text
+skillsOS/
+├── README.md
+├── README.ru.md
+├── README.es.md
+├── README.cn.md
+├── package.json
+├── bin/
+│   └── skillsos-sync.mjs
+├── docs/
+│   └── media/
+├── posts/
+│   └── x/
+└── skillsos-ops-multi-machine-sync/
+    ├── README.md
+    └── references/
+        ├── architecture.md
+        ├── roadmap.md
+        ├── ssh-config.example
+        ├── skillsos-sync.example.json
+        └── skillsos-sync.remote-aliases.example.json
+```
+
+## Current Pack
+
+- [`skillsos-ops-multi-machine-sync/`](./skillsos-ops-multi-machine-sync/README.md)
+
+## Disclaimer
+
+This repo is intentionally modest.
+
+It is a current working pattern, not a universal secret playbook.
+
+If you have a cleaner setup, a stronger install model, or a better pack structure:
+
 - fork it
 - open a PR
-- show a better pattern
+- show a better way
 
-The goal is not to pretend this is a finished framework.
-The goal is to make one useful operator pattern easier to reuse and improve together.
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=AI-Neighbors/skillsOS&type=Date)](https://star-history.com/#AI-Neighbors/skillsOS&Date)
+
+## License
+
+MIT
+
+## Let's Connect
+
+- X: https://x.com/developerisnow1
+- LinkedIn: https://www.linkedin.com/company/ai-llm-neighbors/
+- Website: https://useclaw.pro/verified-skills
+- Email: info@llmneighbors.com
