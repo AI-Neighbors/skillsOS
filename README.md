@@ -1,17 +1,30 @@
 # skillsOS
 
-[![EN](https://img.shields.io/badge/EN-read-green?style=flat)](./README.md)
-[![RU](https://img.shields.io/badge/RU-read-blue?style=flat)](./README.ru.md)
-[![ES](https://img.shields.io/badge/ES-read-orange?style=flat)](./README.es.md)
-[![CN](https://img.shields.io/badge/CN-read-red?style=flat)](./README.cn.md)
+[English](README.md) | [Русский](README.ru.md) | [Español](README.es.md) | [中文](README.cn.md)
 
-> Copy-paste does not survive multi-machine agent workflows for long.
+<p align="center">
+  <a href="https://github.com/AI-Neighbors/skillsOS">
+    <img src="docs/media/linkedin-hero.webp" alt="skillsOS hero" width="800">
+  </a>
+</p>
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=anthropic&logoColor=white)
-![Codex](https://img.shields.io/badge/Codex-111111?style=flat&logo=openai&logoColor=white)
-![OpenCode](https://img.shields.io/badge/OpenCode-222222?style=flat)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+<p align="center">
+  <em>One repo. Reusable packs across isolated runtimes.</em><br>
+  Manual copy-paste breaks fast once you run <strong>Claude Code</strong>, <strong>Codex</strong>, <strong>OpenCode</strong>, <strong>OpenClaw</strong>, and <strong>Pi</strong> across several machines.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=anthropic&logoColor=white" alt="Claude Code">
+  <img src="https://img.shields.io/badge/Codex-111111?style=flat&logo=openai&logoColor=white" alt="Codex">
+  <img src="https://img.shields.io/badge/OpenCode-222222?style=flat" alt="OpenCode">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" alt="Node.js">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT"></a>
+  <br>
+  <a href="README.md"><img src="https://img.shields.io/badge/EN-blue?style=flat" alt="EN"></a>
+  <a href="README.ru.md"><img src="https://img.shields.io/badge/RU-6B7280?style=flat" alt="RU"></a>
+  <a href="README.es.md"><img src="https://img.shields.io/badge/ES-red?style=flat" alt="ES"></a>
+  <a href="README.cn.md"><img src="https://img.shields.io/badge/CN-green?style=flat" alt="CN"></a>
+</p>
 
 ---
 
@@ -28,32 +41,40 @@
   </tr>
 </table>
 
+<p align="center"><strong>One public pack · one sync CLI · one contribution surface</strong></p>
+
+<p align="center">
+  <a href="https://github.com/AI-Neighbors/skillsOS/stargazers"><img src="https://img.shields.io/badge/Star-Repository-black?style=for-the-badge&logo=github" alt="Star Repository"></a>
+  <a href="https://github.com/AI-Neighbors/skillsOS/fork"><img src="https://img.shields.io/badge/Fork-Repository-24292F?style=for-the-badge&logo=github" alt="Fork Repository"></a>
+  <a href="https://github.com/AI-Neighbors/skillsOS/pulls"><img src="https://img.shields.io/badge/Send-PR-2EA043?style=for-the-badge&logo=github" alt="Send PR"></a>
+</p>
+
 ## What Is This
 
-`skillsOS` is a small open repo for one practical operator problem:
+`skillsOS` is a small open-source repo for one operator problem:
 
 keeping reusable workflow assets in sync across several machines and isolated runtimes without endless manual copy-paste.
 
-This repo is not trying to be a giant framework.
+This repo is intentionally narrow.
 
-It is a focused public slice around:
+It is not trying to be a giant framework or a universal secret playbook.
+
+It is a public working slice built around:
 
 - one runnable sync CLI
 - one public pack
-- one clean contribution surface
+- one clear contribution surface
 
-If you work across `Codex`, `Claude Code`, `OpenCode`, `OpenClaw`, `Pi`, or similar isolated runtimes, this is the kind of problem it addresses.
+## Why This Exists
 
-## Features
+When the same pack needs to live across `vps1`, `vps2`, `vps3`, local machines, and isolated runtimes, drift starts fast:
 
-| Feature | What it does |
-| --- | --- |
-| `skillsos-sync` CLI | Plans, syncs, verifies, and snapshots one pack across multiple targets |
-| Public-safe manifests | Example local and remote alias manifests without leaking private hostnames |
-| Pack vs runtime split | Keeps reusable packs separate from runtime-specific skill rails |
-| Side-by-side media | One image and one loop preview for social and README reuse |
-| X stubs | Lightweight post drafts for `EN`, `RU`, `ES`, and `CN` |
-| Contribution-first framing | Clear `Star / Fork / PR / Contribute` entrypoint |
+- one runtime gets the new pack
+- another keeps the old copy
+- one host has a local tweak nobody remembers
+- examples leak private hostnames unless you clean them up on purpose
+
+`skillsOS` exists to keep that boring operator problem explicit and reproducible.
 
 ## Quick Start
 
@@ -85,10 +106,10 @@ npm run sync:verify -- \
 
 | Need | Command |
 | --- | --- |
-| Inspect what will happen | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
-| Install the pack locally | `npm run sync:apply -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
-| Verify installed targets | `npm run sync:verify -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
-| Inspect remote alias fan-out | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.remote-aliases.example.json --all-hosts` |
+| See what will change | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Install the public pack | `npm run sync:apply -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Verify targets after sync | `npm run sync:verify -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.example.json --all-hosts` |
+| Preview remote alias fan-out | `npm run sync:plan -- --manifest skillsos-ops-multi-machine-sync/references/skillsos-sync.remote-aliases.example.json --all-hosts` |
 
 ## How It Works
 
@@ -114,11 +135,11 @@ one repo
                 +-- vps3
 ```
 
-The main point is simple:
+The model is simple:
 
 - keep the pack as the source
 - keep installation repeatable
-- keep examples generic and public-safe
+- keep public examples anonymous and safe
 
 ## Project Structure
 
@@ -133,8 +154,6 @@ skillsOS/
 │   └── skillsos-sync.mjs
 ├── docs/
 │   └── media/
-├── posts/
-│   └── x/
 └── skillsos-ops-multi-machine-sync/
     ├── README.md
     └── references/
@@ -151,27 +170,34 @@ skillsOS/
 
 ## Disclaimer
 
-This repo is intentionally modest.
+This repo shows a current working pattern, not the final answer.
 
-It is a current working pattern, not a universal secret playbook.
+If you have a cleaner setup, a stronger install model, or a better structure:
 
-If you have a cleaner setup, a stronger install model, or a better pack structure:
-
+- star it
 - fork it
 - open a PR
 - show a better way
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=AI-Neighbors/skillsOS&type=Date)](https://star-history.com/#AI-Neighbors/skillsOS&Date)
+<a href="https://www.star-history.com/?repos=AI-Neighbors%2FskillsOS&type=timeline&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=AI-Neighbors/skillsOS&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=AI-Neighbors/skillsOS&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=AI-Neighbors/skillsOS&type=timeline&legend=top-left" />
+ </picture>
+</a>
 
 ## License
 
-MIT
+This project is released under the [MIT License](LICENSE).
 
 ## Let's Connect
 
-- X: https://x.com/developerisnow1
-- LinkedIn: https://www.linkedin.com/company/ai-llm-neighbors/
-- Website: https://useclaw.pro/verified-skills
-- Email: info@llmneighbors.com
+<p align="center">
+  <a href="https://x.com/developerisnow1"><img src="https://img.shields.io/badge/X-@developerisnow1-000000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
+  <a href="https://www.linkedin.com/company/ai-llm-neighbors/"><img src="https://img.shields.io/badge/LinkedIn-AI_Neighbors-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://useclaw.pro/verified-skills"><img src="https://img.shields.io/badge/Website-Verified_Skills-1F883D?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+  <a href="mailto:info@llmneighbors.com"><img src="https://img.shields.io/badge/Email-info@llmneighbors.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+</p>
