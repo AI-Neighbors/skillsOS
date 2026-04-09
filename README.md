@@ -53,13 +53,15 @@ Public landing for `aidirectory.llmneighbors.com`.
 
 ## What Is This
 
-`skillsOS` is a small open-source repo for one operator problem and one public landing path:
+`skillsOS` is a public-safe directory of reusable operator skills and playbooks built from real work.
+
+The current public-facing direction is the `aidirectory` slice behind `aidirectory.llmneighbors.com`.
+
+It exists to solve one operator problem:
 
 keeping reusable workflow assets in sync across several machines and isolated runtimes without endless manual copy-paste.
 
-The current public-facing direction is the AI directory slice behind `aidirectory.llmneighbors.com`.
-
-This repo is intentionally narrow.
+This repo is intentionally narrow and stays focused on one public pack, one sync CLI, and one clear contribution surface.
 
 It is not trying to be a giant framework or a universal secret playbook.
 
@@ -68,6 +70,12 @@ It is a public working slice built around:
 - one runnable sync CLI
 - one public pack
 - one clear contribution surface
+
+## Who This Helps
+
+- people who need reusable workflow assets across several machines
+- operators who want one clear public pack instead of scattered notes
+- contributors who need a readable install-and-PR path
 
 ## Why This Exists
 
@@ -79,6 +87,8 @@ When the same pack needs to live across `vps1`, `vps2`, `vps3`, local machines, 
 - examples leak private hostnames unless you clean them up on purpose
 
 `skillsOS` exists to keep that boring operator problem explicit and reproducible.
+
+It is not auth, SSO, domain, or product-platform work.
 
 ## Quick Start
 
