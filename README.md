@@ -2,7 +2,7 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Español](README.es.md) | [中文](README.cn.md)
 
-Public landing for `aidirectory.llmneighbors.com`.
+Public directory of reusable operator skills and playbooks.
 
 <p align="center">
   <a href="https://github.com/AI-Neighbors/skillsOS">
@@ -11,7 +11,7 @@ Public landing for `aidirectory.llmneighbors.com`.
 </p>
 
 <p align="center">
-  <em>One repo. One public AI-directory slice. Reusable packs across isolated runtimes.</em><br>
+  <em>One repo. One public directory. Reusable packs across isolated runtimes.</em><br>
   Manual copy-paste breaks fast once you run <strong>Claude Code</strong>, <strong>Codex</strong>, <strong>OpenCode</strong>, <strong>OpenClaw</strong>, and <strong>Pi</strong> across several machines.
 </p>
 
@@ -55,7 +55,7 @@ Public landing for `aidirectory.llmneighbors.com`.
 
 `skillsOS` is a public-safe directory of reusable operator skills and playbooks built from real work.
 
-The current public-facing direction is the `aidirectory` slice behind `aidirectory.llmneighbors.com`.
+The current public-facing direction is the directory surface itself: clear categories and shipped entries.
 
 It exists to solve one operator problem:
 
@@ -88,7 +88,7 @@ When the same pack needs to live across `vps1`, `vps2`, `vps3`, local machines, 
 
 `skillsOS` exists to keep that boring operator problem explicit and reproducible.
 
-It is not auth, SSO, domain, or product-platform work.
+It is not auth, SSO, or product-platform work.
 
 ## Quick Start
 
