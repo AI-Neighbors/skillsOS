@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md) | [Español](README.es.md) | [中文](README.cn.md)
 
+Public landing for `aidirectory.llmneighbors.com`.
+
 <p align="center">
   <a href="https://github.com/AI-Neighbors/skillsOS">
     <img src="docs/media/linkedin-hero.webp" alt="skillsOS hero" width="800">
@@ -9,7 +11,7 @@
 </p>
 
 <p align="center">
-  <em>One repo. Reusable packs across isolated runtimes.</em><br>
+  <em>One repo. One public AI-directory slice. Reusable packs across isolated runtimes.</em><br>
   Manual copy-paste breaks fast once you run <strong>Claude Code</strong>, <strong>Codex</strong>, <strong>OpenCode</strong>, <strong>OpenClaw</strong>, and <strong>Pi</strong> across several machines.
 </p>
 
@@ -51,9 +53,11 @@
 
 ## What Is This
 
-`skillsOS` is a small open-source repo for one operator problem:
+`skillsOS` is a small open-source repo for one operator problem and one public landing path:
 
 keeping reusable workflow assets in sync across several machines and isolated runtimes without endless manual copy-paste.
+
+The current public-facing direction is the AI directory slice behind `aidirectory.llmneighbors.com`.
 
 This repo is intentionally narrow.
 
@@ -167,6 +171,14 @@ skillsOS/
 ## Current Pack
 
 - [`skillsos-ops-multi-machine-sync/`](./skillsos-ops-multi-machine-sync/README.md)
+
+## First Entry
+
+If you are here to understand the current public slice, start with:
+
+- [`skillsos-ops-multi-machine-sync/README.md`](./skillsos-ops-multi-machine-sync/README.md)
+
+That pack is the current bounded delivery base for the public directory rail.
 
 ## Disclaimer
 

@@ -4,6 +4,8 @@ This pack is about one practical problem:
 
 keeping reusable workflow assets in sync across several machines and isolated runtimes without endless manual copy-paste.
 
+This is also the current delivery base for the public AI-directory slice behind `aidirectory.llmneighbors.com`.
+
 Typical surfaces in that setup:
 
 - `Codex`
