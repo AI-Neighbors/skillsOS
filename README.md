@@ -182,6 +182,13 @@ skillsOS/
 
 - [`skillsos-ops-multi-machine-sync/`](./skillsos-ops-multi-machine-sync/README.md)
 
+## Browse the Directory
+
+This public directory currently has one shipped entry and one first category:
+
+- `Category`: `Multi-machine sync`
+- `Entry`: [`skillsos-ops-multi-machine-sync/`](./skillsos-ops-multi-machine-sync/README.md)
+
 ## First Entry
 
 If you are here to understand the current public slice, start with:
